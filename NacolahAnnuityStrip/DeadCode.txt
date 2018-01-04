@@ -1,0 +1,101 @@
+﻿
+
+            //remove all page footers
+            //pdfLines.RemoveAll(item => item.StartsWith("https"));
+            //pdfLines.RemoveAll(item => item.EndsWith("CommissionStatement"));
+
+            //for (int i = 0; i < pdfLines.Count; i++) {
+
+            //    while (!pdfLines[i].StartsWith("8000")) {
+            //        i++;
+            //    }
+
+            //    List<string> tokens = new List<string>();
+            //    int dateCount = 0;
+
+            //    tokens.AddRange(pdfLines[i++].Split(' '));
+            //    if (i == pdfLines.Count)
+            //        break;
+
+            //    while (!pdfLines[i].StartsWith("8000")) {
+            //        tokens.AddRange(pdfLines[i++].Split(' '));
+            //        if (i == pdfLines.Count)
+            //            break;
+            //    }
+            //    i--;
+
+            //    DateTime tempcnt;
+
+            //    tokens.ForEach(token => {
+            //        if (DateTime.TryParse(token, out tempcnt)) {
+            //            dateCount++;
+            //        }
+            //    });
+            //    string policyNum = tokens[0];
+            //    tokens.RemoveAt(0);
+
+            //    DateTime temp;
+            //    string issueDate = "";
+            //    if (dateCount == 2) {
+            //        for (int j = 0; j < tokens.Count; j++) {
+            //            if (DateTime.TryParse(tokens[j], out temp)) {
+            //                issueDate = tokens[j];
+            //                tokens.RemoveAt(j);
+            //                break;
+            //            }
+            //        }
+            //    }
+
+            //    string premium = "";
+            //    for (int j = 0; j < tokens.Count; j++) {
+            //        if (tokens[j].StartsWith("$")) {
+            //            premium = tokens[j];
+            //            tokens.RemoveAt(j);
+            //            break;
+            //        }
+            //    }
+
+            //    string rate = "";
+            //    for (int j = 0; j < tokens.Count; j++) {
+            //        if (tokens[j].EndsWith("%") || tokens[j].StartsWith("-$")) {
+            //            rate = tokens[j];
+            //            tokens.RemoveAt(j);
+            //            break;
+            //        }
+            //    }
+
+            //    string commission = "";
+            //    for (int j = 0; j < tokens.Count; j++) {
+            //        if (tokens[j].StartsWith("$") || tokens[j].StartsWith("-$")) {
+            //            commission = tokens[j];
+            //            tokens.RemoveAt(j);
+            //            break;
+            //        }
+            //    }
+
+            //    string split = "";
+            //    for (int j = 0; j < tokens.Count; j++) {
+            //        if (tokens[j].EndsWith("%")) {
+            //            split = tokens[j];
+            //            tokens.RemoveAt(j);
+            //            break;
+            //        }
+            //    }
+            //    int nameInt = tokens.IndexOf("Name:") + 1;
+            //    string name = "";
+            //    while (nameInt != tokens.Count && tokens[nameInt] != "Agent:") {
+            //        name += (tokens[nameInt] + " ");
+            //        nameInt++;
+            //    }
+
+            //    string plan = "";
+            //    int planCnt = 0;
+            //    while (planCnt < 5 && !DateTime.TryParse(tokens[0], out temp)) {
+            //        plan += tokens[0] + " ";
+            //        planCnt++;
+            //        tokens.RemoveAt(0);
+            //    }
+            //    if (Convert.ToDouble(commission.Replace("$", "")) != 0) {
+            //        commLines.Add(new CommLine(name, policyNum, issueDate, premium, rate, commission, split, plan));
+            //    }
+            //}

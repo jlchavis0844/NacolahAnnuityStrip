@@ -89,6 +89,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DeadCode.txt" />
     <Content Include="NAC.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
