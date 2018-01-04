@@ -159,12 +159,12 @@ namespace NacolahAnnuityStrip {
             }
 
             commLines.RemoveAll(c => c.comm == 0);
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\testing\outPut.txt")) {
-                foreach (CommLine line in commLines) {
-                    file.WriteLine(line);
-                    Console.WriteLine(line);
-                }
-            }
+            //using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\testing\outPut.txt")) {
+            //    foreach (CommLine line in commLines) {
+            //        file.WriteLine(line);
+            //        Console.WriteLine(line);
+            //    }
+            //}
 
             string pdfTotal = pdfLines.Find(e => e.StartsWith("EFT Amount")).Replace("EFT Amount","").Replace("$","").Trim();
             double commTotal = commLines.Sum(e => e.comm);
